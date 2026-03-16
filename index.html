@@ -315,29 +315,6 @@
       System Design
     </h2>
     <!-- Text Description -->
-    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
-      <p>
-      The human demonstration interface features a decoupled design comprising a fisheye camera, motion-capture gloves, high-resolution tactile sensors, and a T265 tracking camera. The robot execution platform utilizes an isomorphic perception architecture wherein the tactile sensors remain strictly consistent with those on the human demonstration interface. 
-      </p>
-     </div>
-    <img 
-      src="static/images/image1.png" 
-      width="100%" 
-      loading="lazy"
-      style="border-radius:10px; margin-top:20px;">
-  </div>
-</section>
-
-<!-- End image carousel -->
-
-
-<!-- Image carousel -->
-<section class="section">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered">
-      System Design
-    </h2>
-    <!-- Text Description -->
     <div class="content has-text-justified">
             <p>
               The human demonstration interface features a decoupled design comprising a fisheye camera, motion-capture gloves, high-resolution tactile sensors, and a T265 tracking camera. The robot execution platform utilizes an isomorphic perception architecture wherein the tactile sensors remain strictly consistent with those on the human demonstration interface. 
@@ -350,10 +327,9 @@
       style="border-radius:10px; margin-top:20px;">
   </div>
 </section>
-
 <!-- End image carousel -->
-    
-    
+  
+
  <!-- Video Subsection Title -->
     <h2 class="title is-3 has-text-centered">
       In the Wild  Data Collection
@@ -385,7 +361,132 @@
   </div>
 </section>
 
- 
+<!-- Image carousel -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">
+      Dataset Visualization
+    </h2>
+    <!-- Text Description -->
+    <div class="content has-text-justified">
+            <p>
+              The dataset contains 2,400+ visuo-tactile-kinematic demonstrations across 40+ tasks in 10+ real-world environments. 
+            </p>
+          </div>
+    <img 
+      src="static/images/image1.png" 
+      width="100%" 
+      loading="lazy"
+      style="border-radius:10px; margin-top:20px;">
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">
+      Two-Stage Learning Strategy
+    </h2>
+    <!-- Text Description -->
+    <div class="content has-text-justified">
+            <p>
+              Stage 1: A self-supervised framework aligns high-density tactile features with visual anchors utilizing a kinematics-Grounded encoder to learn spatially anchored representations. Stage 2: The pretrained encoders are subsequently integrated into an Action Chunking with Transformers (ACT) policy to map synchronized multimodal observations to multi-step action sequences for contact-rich dexterous manipulation. 
+            </p>
+          </div>
+    <img 
+      src="static/images/image1.png" 
+      width="100%" 
+      loading="lazy"
+      style="border-radius:10px; margin-top:20px;">
+  </div>
+</section>
+<!-- End image carousel -->
+
+<section class="section">
+  <div class="container">
+
+    <!-- Section Title -->
+    <h2 class="title is-3 has-text-centered" style="margin-bottom:40px;">
+      Autonomous Policy Rollouts
+    </h2>
+
+    <!-- Text Description -->
+    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
+      <p>
+      Deployment experiments are conducted across four representative tasks to evaluate real-world performance: pipetting, whiteboard erasing, pen insertion, and fruit collection.
+      </p>
+    </div>
+
+    <!-- Video Subsection Title -->
+    <h4 class="title is-4 has-text-centered" style="margin-bottom:40px;">
+      Pipetting
+    </h4>
+    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
+      <p>
+      The dexterous hand precisely regulates pinch force to operate a flexible rubber bulb, testing the high-sensitivity force control performance of the system.
+      </p>
+    </div>
+    <!-- Video -->
+    <div style="max-width:900px; margin:auto;">
+      <video autoplay muted loop playsinline width="100%" style="border-radius:12px;">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+   <!-- Video Subsection Title -->
+    <h4 class="title is-4 has-text-centered" style="margin-bottom:40px;">
+      Whiteboard Erasing
+    </h4>
+    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
+      <p>
+      This requires the end-effector to maintain constant contact pressure along dynamic trajectories, evaluating force compliance and stability during dynamic interactions.
+      </p>
+    </div>
+    <!-- Video -->
+    <div style="max-width:900px; margin:auto;">
+      <video autoplay muted loop playsinline width="100%" style="border-radius:12px;">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Video Subsection Title -->
+    <h4 class="title is-4 has-text-centered" style="margin-bottom:40px;">
+      Marker Insertion
+    </h4>
+    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
+      <p>
+      Grasping and inserting small markers, involving stable grasping and in-hand manipulation capabilities.
+      </p>
+    </div>
+    <!-- Video -->
+    <div style="max-width:900px; margin:auto;">
+      <video autoplay muted loop playsinline width="100%" style="border-radius:12px;">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Video Subsection Title -->
+    <h4 class="title is-4 has-text-centered" style="margin-bottom:40px;">
+      Fruit Collection
+    </h4>
+    <div style="max-width:1000px; margin:auto; margin-bottom:60px; font-size:1.05rem; color:#444; line-height:1.7;">
+      <p>
+      Operating on heterogeneous objects with varying stiffness to verify adaptability to different physical properties.
+      </p>
+    </div>
+    <!-- Video -->
+    <div style="max-width:900px; margin:auto;">
+      <video autoplay muted loop playsinline width="100%" style="border-radius:12px;">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+  </div>
+</section>
+
+
     
 <section class="section">
   <div class="container">
