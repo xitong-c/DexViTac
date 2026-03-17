@@ -202,16 +202,20 @@
             </h1>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="FIRST AUTHOR LINK" target="_blank">Xitong Chen</a><sup></sup>,
+             <span class="author-block">
+               <a href="FIRST AUTHOR LINK" target="_blank">Xitong Chen</a>,
+             </span>
+             <span class="author-block">
+              <a href="SECOND AUTHOR LINK" target="_blank">Yifeng Pan</a>,
               </span>
-              <span class="author-block">
-                <a href="SECOND AUTHOR LINK" target="_blank">Yifeng Pan</a><sup></sup>,
-              </span>
-              <span class="author-block">
-                <a href="THIRD AUTHOR LINK" target="_blank">Min Li</a>
+            <span class="author-block">
+              <a href="THIRD AUTHOR LINK" target="_blank">Min Li</a><sup>*</sup>,
+            </span>
+             <span class="author-block">
+              <a href="FOURTH AUTHOR LINK" target="_blank">Xiaotian Ding</a>
               </span>
             </div>
+        
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">Institution Name / Conference Name</span>
@@ -291,7 +295,8 @@
 
 
 <section class="section">
-  <div class="container is-max-widescreen"> <h2 class="title is-3 has-text-centered">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">
       System Design
     </h2>
     <div class="content has-text-justified">
@@ -302,54 +307,62 @@
 
     <div style="
         display: flex;
-        justify-content: center; /* 水平居中整体内容 */
-        align-items: center;     /* 垂直方向对齐（可选） */
-        gap: 20px;               /* 模型和图片之间的间距 */
-        margin-top: 20px;        /* 与上方文字的间距 */
-        flex-wrap: wrap;         /* 移动端自动换行 */
+        justify-content: center; /* 水平居中 */
+        align-items: stretch;     /* 💡 关键：强制模型和图片容器高度拉伸一致 */
+        gap: 24px;               /* 稍微加大间距，更显大气 */
+        margin-top: 30px;
+        flex-wrap: wrap;         /* 移动端换行 */
     ">
 
       <div style="
-          flex: 1;                 /* 占据可用空间的分片 */
-          min-width: 300px;        /* 移动端最小宽度 */
-          max-width: 600px;        /* 限制模型最大宽度，避免抢镜 */
-          aspect-ratio: 4 / 3;     /* 保持模型的固定比例 */
+          flex: 1;
+          min-width: 300px;
+          max-width: 600px;
+          /* ✅ 移除 aspect-ratio，通过 align-items: stretch 由图片高度决定 */
+          background-color: #fff; /* 模型背景通常为白色 */
           border-radius: 12px;
-          overflow: hidden;        /* 确保圆角剪裁 iframe */
-          box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-          border: 1px solid #eee;  /* 给模型加个淡淡的边框，更有质感 */
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 稍微淡化阴影，保持一致 */
+          border: 1px solid #e0e0e0; /* 淡淡的边框线 */
+          display: flex; /* 让 iframe 填满此容器 */
       ">
         <iframe 
           src="static/models/system.html" 
           title="eDrawings 3D Model"
-          style="width: 100%; height: 100%; border: none;"
+          style="
+              width: 100%; 
+              height: 100%; /* 填满父容器高度 */
+              border: none;
+              display: block;
+          "
           scrolling="no"
           allowfullscreen>
         </iframe>
       </div>
 
       <div style="
-          flex: 1;                 /* 占据可用空间的分片 */
-          min-width: 300px;        /* 移动端最小宽度 */
-          max-width: 600px;        /* 限制图片最大宽度 */
+          flex: 1;
+          min-width: 300px;
+          max-width: 600px;
+          display: flex; /* 让图片填满此容器 */
+          align-items: center; /* 图片在自身容器内垂直居中（如果比例不同） */
       ">
         <img 
           src="static/images/systemdesign.jpg" 
           loading="lazy"
           alt="System Design Diagram"
           style="
-              width: 100%;          /* 填满父容器 */
+              width: 100%;          
               height: auto;         /* 保持比例 */
               border-radius: 12px;
-              box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-              display: block;       /* 消除图片底部空隙 */
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+              display: block;       
           ">
       </div>
 
     </div>
     </div>
 </section>
-
 
 <div class="video-section-wrapper">
   <h2 class="title is-3 has-text-centered">
