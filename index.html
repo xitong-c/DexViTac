@@ -218,7 +218,7 @@
         
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Institution Name / Conference Name</span>
+              <span class="author-block">Huazhong University of Science and Technology</span>
             </div>
 
             <div class="column has-text-centered">
@@ -265,7 +265,7 @@
     <div class="hero-body">
 
       <img 
-        src="static/images/overview.jpg" 
+        src="static/images/overview.png" 
         width="100%" 
         style="border-radius:10px;">
 
@@ -307,53 +307,44 @@
 
     <div style="
         display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: stretch;     /* 💡 关键：强制模型和图片容器高度拉伸一致 */
-        gap: 24px;               /* 稍微加大间距，更显大气 */
+        justify-content: center;
+        align-items: stretch;     /* 保持上下对齐的关键 */
+        gap: 20px;
         margin-top: 30px;
-        flex-wrap: wrap;         /* 移动端换行 */
+        flex-wrap: wrap;
     ">
 
       <div style="
-          flex: 1;
+          flex: 0.8;               /* 💡 减小比例，原本是 1 */
           min-width: 300px;
-          max-width: 600px;
-          /* ✅ 移除 aspect-ratio，通过 align-items: stretch 由图片高度决定 */
-          background-color: #fff; /* 模型背景通常为白色 */
+          max-width: 450px;        /* 💡 限制最大宽度，不让它占太多空间 */
+          background-color: #fff;
           border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 稍微淡化阴影，保持一致 */
-          border: 1px solid #e0e0e0; /* 淡淡的边框线 */
-          display: flex; /* 让 iframe 填满此容器 */
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          border: 1px solid #e0e0e0;
+          display: flex;
       ">
         <iframe 
-          src="static/models/DexViTac_3D_Model.html" 
-          title="eDrawings 3D Model"
-          style="
-              width: 100%; 
-              height: 100%; /* 填满父容器高度 */
-              border: none;
-              display: block;
-          "
+          src="static/models/system.html" 
+          style="width: 100%; height: 100%; border: none; display: block;"
           scrolling="no"
           allowfullscreen>
         </iframe>
       </div>
 
       <div style="
-          flex: 1;
-          min-width: 300px;
-          max-width: 600px;
-          display: flex; /* 让图片填满此容器 */
-          align-items: center; /* 图片在自身容器内垂直居中（如果比例不同） */
+          flex: 1.2;               /* 💡 增加比例，让图片分得更多空间 */
+          min-width: 350px;
+          max-width: 750px;        /* 💡 允许图片更大 */
+          display: flex;
       ">
         <img 
           src="static/images/systemdesign.jpg" 
-          loading="lazy"
-          alt="System Design Diagram"
           style="
               width: 100%;          
               height: auto;         /* 保持比例 */
+              object-fit: contain;  /* 确保图片完整显示 */
               border-radius: 12px;
               box-shadow: 0 10px 30px rgba(0,0,0,0.1);
               display: block;       
@@ -369,11 +360,7 @@
       In the Wild  Data Collection
     </h2>
     <!-- Text Description -->
-    <div class="content has-text-justified">
-            <p>
-              The human demonstration interface features a decoupled design comprising a fisheye camera, motion-capture gloves, high-resolution tactile sensors, and a T265 tracking camera. The robot execution platform utilizes an isomorphic perception architecture wherein the tactile sensors remain strictly consistent with those on the human demonstration interface. 
-            </p>
-          </div>
+    
     <style>
         .video-section-wrapper {
             max-width: 1200px;
@@ -489,7 +476,7 @@
     <!-- Text Description -->
     <div class="content has-text-justified">
             <p>
-              The human demonstration interface features a decoupled design comprising a fisheye camera, motion-capture gloves, high-resolution tactile sensors, and a T265 tracking camera. The robot execution platform utilizes an isomorphic perception architecture wherein the tactile sensors remain strictly consistent with those on the human demonstration interface. 
+              To prevent frame loss and ensure tight spatiotemporal alignment across different modalities, we employ high-frequency buffering alongside a tactile-anchored synchronization strategy that involves downsampling and nearest-neighbor matching.
             </p>
           </div>
     <!-- Figure -->
@@ -499,11 +486,6 @@
         src="static/images/collectionpipeline.jpg"
         loading="lazy"
         style="max-width:1200px; width:60%; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
-
-      <!-- Caption -->
-      <figcaption style="margin-top:20px; font-size:0.95rem; color:#555; max-width:1000px; margin-left:auto; margin-right:auto;">
-        <strong>Figure:</strong> We demonstrate that motion capture gloves provide more stable hand pose estimation results compared to vision-based methods and are not affected by visual occlusion.
-      </figcaption>
 
     </figure>
 
